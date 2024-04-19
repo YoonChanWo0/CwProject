@@ -35,7 +35,7 @@ public class Exe {
 			    System.out.println("MySQL 드라이버 로드 성공!");
 			    String url = "jdbc:mysql://localhost:3306/cwproject";  // 수정된 URL
 			    String user = "root";
-			    String pw = "1234";
+			    String pw = "****";
 			    String sql = "SELECT * FROM Account";
 			    
 			    conn = DriverManager.getConnection(url, user, pw);
