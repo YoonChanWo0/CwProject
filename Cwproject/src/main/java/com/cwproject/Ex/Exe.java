@@ -155,7 +155,7 @@ public class Exe {
 	        ResultSet rs = null; // 결과를 rs에 저징
 	        try {
 	            Class.forName("com.mysql.cj.jdbc.Driver"); // MySQL JDBC 드라이버를 로드(등록) : 자바와 db를 연결하기 위해서 dbms에 정보(경로)를 주는것이라고 생각하기
-	            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "1234");
+	            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "****");
 
 	            // 주민번호 중복 예외처리
 	            String checkQuery = "SELECT count(*) FROM Customer WHERE snumber = ?";
@@ -240,7 +240,7 @@ public class Exe {
 	        
 	        try {
 	        	// DB연결
-				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "1234");
+				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "****");
 				
 				// SQL쿼리 실행
 				String query = "SELECT Customer.name, Account.anumber, Account.balance " +
@@ -294,7 +294,7 @@ public class Exe {
 
 		        try {
 		            // DB 연결
-		            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "1234");
+		            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "****");
 
 		            // 계좌번호와 비밀번호 확인
 		            String query = "SELECT balance FROM Account WHERE anumber = ? AND password = ?";
@@ -368,7 +368,7 @@ public class Exe {
 
 		        try {
 		            // DB 연결
-		            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "1234");
+		            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "****");
 
 		            // 계좌번호와 비밀번호 확인
 		            String query = "SELECT balance FROM Account WHERE anumber = ? AND password = ?";
@@ -438,7 +438,7 @@ public class Exe {
 			ResultSet rs = null;
 			
 			try {
-				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "1234");
+				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cwproject", "root", "****");
 				stmt = conn.createStatement();
 				rs = stmt.executeQuery("SELECT Account.anumber, Account.balance, Customer.name " +
 	                       "FROM Account INNER JOIN Customer ON Account.customer_id = Customer.customer_id");
